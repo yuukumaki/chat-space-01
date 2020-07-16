@@ -52,8 +52,6 @@ Things you may want to cover:
 |name|spring|null: false|
 |email|spring|null: false, unique: true|
 |password|spring|null: false|
-|group_id|integer|foreign_key: true|
-|message_id|integer|foreign_key: true|
 
 ### Association
 - has_many :messages
