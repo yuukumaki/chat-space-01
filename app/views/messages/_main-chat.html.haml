@@ -1,0 +1,63 @@
+.header
+.body
+  .chat-main
+    .group-info
+      .left-side
+        .group__name
+          たんこぶ軍団
+        .member__list
+          ぶつかん
+          こけたん
+          ころんだん
+      .right-side
+        .edit__btn
+        = link_to "#", class:"edit__btn"  do
+          edit
+    .chat-list
+      .space
+      .chats
+        .upper
+          .user__name
+            たけし
+          .chat__date
+            2020/7/20
+        .lower
+          .chat-messages
+            好きだ。
+      .chats
+        .upper
+          .user__name
+            たけし
+          .chat__date
+            2020/7/20
+        .lower
+          .chat-messages
+            好きだ。
+      .chats
+        .upper
+          .user__name
+            たけし
+          .chat__date
+            2020/7/20
+        .lower
+          .chat-messages
+            好きだ。
+      .chats
+        .upper
+          .user__name
+            たけし
+          .chat__date
+            2020/7/20
+        .lower
+          .chat-messages
+            好きだ。
+    .message-form
+      .input-box
+        .text
+          %input{type: "text", placeholder: "type a message", name:"message[content]", id:"message_content"}
+        .image
+          %label{class: "input-box__image"}
+            = icon('fas', 'image')
+            %input{type: "file",class:"file-choice"}
+      .send__btn
+        Send
