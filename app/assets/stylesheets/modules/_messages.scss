@@ -10,9 +10,9 @@
   height: 100vh;
   width: 300px;
   margin: 0 auto;
+  color: #fff;
   .user-name{
     background-color: #253141;
-    color: #ffffff;
     height: 100px;
     padding: 0 20px;
     display: flex;
@@ -45,7 +45,7 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding: 0 20px;
-    .groups{
+    .group{
       color: #ffffff;
       padding:20px 0 40px 0;
       .group__name{

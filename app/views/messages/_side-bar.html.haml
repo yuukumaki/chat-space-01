@@ -7,25 +7,18 @@
           = current_user.name
         .top-items__icons
           .left-icon
-            = icon('far', 'edit')
+            = link_to new_group_path(current_user) do
+              = icon('far', 'edit')
           %span<>
           .right-icon
             = link_to edit_user_path(current_user) do
               = icon('fas', 'cog')
     .group-list
-      .groups
-        .group__name
-          たけし軍団
-        .group__messages
-          アイーン
-      .groups
-        .group__name
-          たけし軍団
-        .group__messages
-          アイーン
-      .groups
-        .group__name
-          たけし軍団
-        .group__messages
-          アイーン
+      - current_user.groups.each do |group|
+        .group
+          = link_to '#' do
+            .group__name
+              = group.name
+            .group__messages
+              メッセージはまだありません
 
