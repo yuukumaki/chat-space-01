@@ -1,21 +1,5 @@
-.header
-.body
-  .chat-main
-    .group-info
-      .left-side
-        .group__name
-          = @group.name
-        .member__list
-          - @group.users.each do |user|
-            = user.name
-      .right-side
-        .edit__btn
-          = link_to edit_group_path(params[:group_id]), class:"edit__btn" do
-            Edit
-    .chat-list
+.message-form
       = render @messages
-    .message-form
-      .input-box
         = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
           %input{type: "text", placeholder: "type a message", name:"message[content]", id:"message_content"}
           = f.label :image, class: 'Form__inputImage' do
