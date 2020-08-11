@@ -104,76 +104,76 @@
     }
   }
   .chat-list{
-    height: calc(100vh - 190px);
-    .space{
-      height:35px;
-    }
-    .chats{
-      height: 88px;
-      padding:0 40px;
-      .upper{
+    background-color: #fafafa;
+    box-sizing: border-box;
+    padding: 35px 40px 0;
+    height: calc(100vh - 100px - 90px);
+    overflow: scroll;
+    .MessageBox{
+      margin-bottom: 46px;
+      .MessageInfo{
         display: flex;
-        flex-direction: row;
-        margin: 0 0 12px 0;
-        .user__name{
-          color: #333333;
+        .MessageInfo__userName{
+          color: #434a54;
           font-size: 16px;
-          margin: 0 5px 0 0 ;
+          font-weight: bold;
         }
-        .chat__date{
-          color: #999999;
+        .MessageInfo__date{
+          color: #999;
           font-size: 12px;
+          padding-left: 10px;
         }
       }
-      .lower{
-        color: #434A54;
-        font-size: 14px;
-        padding: 0;
-        margin: 0 0 46px 0;
+      .Message{
+        margin-top: 12px;
+        .Message_content{
+          color: #434a54;
+          font-size: 14px;
+        }
+        .MessageInfo__image{
+          height: 300px;
+        }
       }
     }
   }
-  .message-form{
+  .Footer{
     background-color: #d2d2d2;
+    box-sizing: border-box;
     height: 90px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding:0 40px;
-    position: relative;
-    .input-box{
-      display: block;
-      height: 50px;
-      width: 100%;
-      padding: 0 10px;
-      background-color: #ffffff;
+    padding: 20px 50px 20px 40px;
+    .Form{
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
-      align-items: center;
-      padding:0 10px;
-      margin: 0 15px 0 0;
-      .text{
-        input{
+      .Form__contents{
+        width: 100%;
+        background-color: #fff;
+        position: relative;
+        .Form__inputContent{
           border: none;
-          width: 100vh;
+          height: 50px;
+          width: 100%;
+          padding: 0 45px 0 15px;
+        }
+        .Form__inputImage{
+          height: 50px;
+          position: absolute;
+          right: 10px;
+          line-height: 50px;
+          font-size: 25px;
+          .Hidden{
+            display: none;
+          }
         }
       }
-      .image{
-        display: block;
-        .file-choice{
-          display: none;
-        }
+      .Form__submit{
+        background-color: #38AEF0;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        height: 50px;
+        margin-left: 15px;
+        padding: 0 30px;
       }
-    }
-    .send__btn{
-      height: 50px;
-      padding: 0 30px;
-      background-color: #38aef0;
-      color: #fff;
-      display: flex;
-      align-items: center;
-    }
+    } 
   }
 }
