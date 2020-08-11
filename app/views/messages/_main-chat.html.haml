@@ -14,11 +14,11 @@
             Edit
     .chat-list
       = render @messages
-    .message-form
-      .input-box
-        = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
-          %input{type: "text", placeholder: "type a message", name:"message[content]", id:"message_content"}
+    .Footer
+      = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+        .Form__contents
+          = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
           = f.label :image, class: 'Form__inputImage' do
             = icon('far', 'image', class: 'Form__icon')
             = f.file_field :image, class: 'Hidden'
-          = f.submit 'Send', class: 'Form__submit'
+        = f.submit 'Send', class: 'Form__submit'
