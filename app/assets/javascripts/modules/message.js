@@ -54,7 +54,8 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      $('.MessageField').append(html);      
+      $('.chat-list').append(html);
+      $('.chat-list').animate({ scrollTop: $('.chat-list')[0].scrollHeight});
       $('form')[0].reset();
       $('.Form__submit').prop("disabled", false);
     })
